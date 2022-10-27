@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadwave Restaurant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+    ">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+
+
+    <div class="container-fluid"    >
+        <div class="row header">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg bg-danger fixed-top" id="myNavbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="Quadwave.png" class="img-fluid"
+                                alt="Quadwave Restaaurant" srcset="" width="100px"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#section1">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section2">Food</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section3">Drinks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section4">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Footer">Contact</a>
+                                </li>
+                            </ul>
+
+                            <button class="btn btn-outline-success bg-dark" data-bs-toggle="modal"
+                                data-bs-target="#login">Login</button>
+                            <button class="btn btn-outline-success bg-dark m-1" type="button" data-bs-toggle="modal"
+                                data-bs-target="#order">Order</button>
+
+
+                </nav>
+                <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog bg-danger">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="loginBox">
+                                    <form action="/login" method="post">
+                                        <img src="/images/Quadwave-Logo1.png" alt=""><br>
+                                        <label for="uname">User Name : <input type="text" name="uname"
+                                                id="uname"></label><br><br>
+                                        <label for="pass"> Password : <input type="password" name="pass"
+                                                id="pass"></label><br><br>
+                                        <input type="submit" value="Submit" class="btn btn-success" id="submit">
+                                        <input type="reset" value="Reset" class="btn btn-warning" id="reset">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal modal-lg fade" id="order" tabindex="-1" aria-labelledby="orderModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="orderModalLabel">Give your Order</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/backend">
+                                    Customer Name : <input type="text" name="name" id="name" required><br><br>
+
+                                    <select class="form-select" aria-label="Default select example" required>
+                                        <option value="1">First Item</option>
+                                        <option value="2">Second item</option>
+                                        <option value="3">Third Item</option>
+                                    </select>
+                                    <br>
+                                    <select class="form-select" aria-label="Default select example" required>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <br>
+                                    Phone Number : <input type="text" name="num" id="num" required>
+                                    <br><br>
+                                    Address : <input type="text" name="add" id="add" required><br><br>
+                                    <input type="submit" value="Submit" class="btn btn-success">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row content">
+        <div class="row" id="section1">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="restaurant1.png" class="d-block w-100" width="1500px" height="984px"
+                            alt="restaurant1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="restaurant3.jpg" class="d-block w-100" alt="restaurant3" width="1500px"
+                            height="984px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="restaurant4.jpeg" class="d-block w-100" width="1500px" height="984px"
+                            alt="restaurant4">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row p-5" id="section2">
+                <div class="container">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Sweet</h3>
+
+                            </div>
+                            <div class="card-body">
+                                <div id="sweetFoodIndicator" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#sweetFoodIndicator" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#sweetFoodIndicator" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#sweetFoodIndicator" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="sweetimg/sweetimg1.jpg" class="d-block w-100" alt="sweet1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpeg" class="d-block w-100" alt="sweet2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg3.jpg" class="d-block w-100" alt="sweet2">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#sweetFoodIndicator" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#sweetFoodIndicator" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium possimus
+                                    consequatur eveniet voluptatem, fugit atque accusantium nemo aperiam provident modi.
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Available
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Fast Food</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="fastFoodIndicator" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#fastFoodIndicator" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#fastFoodIndicator" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#fastFoodIndicator" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="sweetimg/sweetimg1.jpg" class="d-block w-100" alt="sweet1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpeg" class="d-block w-100" alt="sweet2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg3.jpg" class="d-block w-100" alt="sweet2">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#fastFoodIndicator" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#fastFoodIndicator" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium possimus
+                                    consequatur eveniet voluptatem, fugit atque accusantium nemo aperiam provident modi.
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Indian Food</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="indianFoodIndicator" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#indianFoodIndicator" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#indianFoodIndicator" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#indianFoodIndicator" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="sweetimg/sweetimg1.jpg" class="d-block w-100" alt="sweet1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpeg" class="d-block w-100" alt="sweet2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpg" class="d-block w-100" alt="sweet2">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#indianFoodIndicator" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#indianFoodIndicator" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium possimus
+                                    consequatur eveniet voluptatem, fugit atque accusantium nemo aperiam provident modi.
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-5" id="section3">
+                <div class="container">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-header">
+                                Lorem, ipsum.
+                            </div>
+                            <div class="card-body">
+                                <div id="demofood1" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#demofood1" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#demofood1" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#demofood1" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="sweetimg/sweetimg1.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpeg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#demofood1"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#demofood1"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Lorem, ipsum.
+                            </div>
+                            <div class="card-body">
+                                <div id="demoFood2" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#demoFood2" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#demoFood2" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#demoFood2" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="sweetimg/sweetimg1.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpeg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#demoFood2"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#demoFood2"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Lorem, ipsum.
+                            </div>
+                            <div class="card-body">
+                                <div id="demoFood3" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#demoFood3" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#demoFood3" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#demoFood3" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="sweetimg/sweetimg1.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="sweetimg/sweetimg4.jpeg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#demoFood3"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#demoFood3"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="section4">
+            <h4>About Us</h4>
+            <div class="col-5">
+                <img src="sweetimg/restaurantimg.jpeg" alt="" height="100%" width="100%">
+            </div>
+            <div class="col-7">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, rerum nihil possimus enim soluta
+                deserunt sapiente laborum impedit mollitia suscipit fugit, totam quas ipsa nemo aliquam vero, minus
+                accusamus velit. Laborum cum, ea magni reprehenderit exercitationem nulla magnam doloribus corrupti
+                incidunt accusamus mollitia distinctio laboriosam commodi deserunt consequatur asperiores voluptate.
+                <ul>
+                    <li>item1</li>
+                    <li>item1</li>
+                    <li>item1</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid row footer h-25" id="Footer">
+        <div class="col-4">
+            <h5>Address</h5>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis qui ex corrupti sed mollitia,
+                    nisi labore quia nemo iusto recusandae?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis qui ex corrupti sed mollitia,
+                    nisi labore quia nemo iusto recusandae?</li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h5>Links</h5>
+            <ul>
+                <li> <a href="#indianFoodIndicator" class="nav-link">Indian Food</a></li>
+                <li> <a href="#fastFoodIndicator" class="nav-link">Fast Food</a></li>
+                <li> <a href="#demofood1" class="nav-link">Demo Food</a></li>
+                <li> <a href="#sweetFoodIndicator" class="nav-link">Sweet</a></li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h5>Contact us</h5>
+            <b>Phone : </b> 8999688831 <br>
+            <b>Email : </b> quadwave@qmail.com
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

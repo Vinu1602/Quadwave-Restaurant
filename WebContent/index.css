@@ -1,0 +1,12 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+#Footer{
+    background-color: rgb(15, 24, 24);
+    color: white;
+    margin-top: 20px;
+    padding: 2rem;
+}
+
