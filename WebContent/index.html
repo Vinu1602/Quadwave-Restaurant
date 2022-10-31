@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
     ">
     <link rel="stylesheet" href="index.css">
+    <!-- <script src="validation.js"></script> -->
+
+    <script src="validation.js"></script>
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#myNavbar" data-offset="50">
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -24,107 +27,151 @@
         crossorigin="anonymous"></script>
 
 
+    <div class="container">
+        <div class="container">
+            <div class="row header">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg bg-danger fixed-top" id="myNavbar">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><img src="Quadwave.png" class="img-fluid"
+                                    alt="Quadwave Restaaurant" srcset="" width="100px"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#section1">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#section2">Food</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#section3">Drinks</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#section4">About</a>
+                                    </li>
 
-    <div class="container-fluid"    >
-        <div class="row header">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg bg-danger fixed-top" id="myNavbar">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="Quadwave.png" class="img-fluid"
-                                alt="Quadwave Restaaurant" srcset="" width="100px"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#section1">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#section2">Food</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#section3">Drinks</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#section4">About</a>
-                                </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#Footer">Contact</a>
+                                    </li>
+                                </ul>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#Footer">Contact</a>
-                                </li>
-                            </ul>
-
-                            <button class="btn btn-outline-success bg-dark" data-bs-toggle="modal"
-                                data-bs-target="#login">Login</button>
-                            <button class="btn btn-outline-success bg-dark m-1" type="button" data-bs-toggle="modal"
-                                data-bs-target="#order">Order</button>
+                                <button class="btn btn-outline-success bg-dark" data-bs-toggle="modal"
+                                    data-bs-target="#login">Login</button>
+                                <button class="btn btn-outline-success bg-dark m-1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#order">Order</button>
 
 
-                </nav>
-                <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog bg-danger">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="loginBox">
-                                    <form action="/login" method="post">
-                                        <img src="/images/Quadwave-Logo1.png" alt=""><br>
-                                        <label for="uname">User Name : <input type="text" name="uname"
-                                                id="uname"></label><br><br>
-                                        <label for="pass"> Password : <input type="password" name="pass"
-                                                id="pass"></label><br><br>
-                                        <input type="submit" value="Submit" class="btn btn-success" id="submit">
-                                        <input type="reset" value="Reset" class="btn btn-warning" id="reset">
-                                    </form>
+                    </nav>
+                    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog bg-danger">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <div class="modal-body">
+                                    <div class="loginBox">
+                                        <form action="/login" method="post">
+                                            <label for="uname">Email : <input type="email" name="email" id="email"
+                                                    required></label><br><br>
+                                            <label for="pass"> Password : <input type="password" name="pass" id="pass"
+                                                    required></label><br><br>
+                                            <input type="submit" value="Submit" class="btn btn-success" id="submit">
+                                            <input type="reset" value="Reset" class="btn btn-warning" id="reset">
+                                        </form>
+                                    </div>
+                                    <button class="btn btn-outline-success bg-dark m-1" type="button"
+                                        data-bs-toggle="modal" data-bs-target="#register">Register Account</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="modal modal-lg fade" id="order" tabindex="-1" aria-labelledby="orderModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="orderModalLabel">Give your Order</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                    <div class="modal fade modal-lg" id="register" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog bg-danger">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="loginBox">
+                                        <form action="/register" method="post">
+                                            Name : <input type="text" name="rname" id="rname" required><br><br>
+                                            Email : <input type="email" name="remail" id="email"
+                                                placeholder="this@this.com" required><br><br>
+                                            Phone : <input type="number" name="rphone" id="phone" required
+                                                min="1000000000" max="9999999999"><br><br>
+                                            Password : <input type="password" name="rpassword" id="rpassword" required
+                                                minlength="8" maxlength="20" onkeydown="adddanger()"><br><br>
+                                            Confirm Password : <input type="password" name="rcpassword" id="rcpassword"
+                                                required onkeyup="validate()" minlength="8" maxlength="20" class="">
+                                            <span id="passMessage"></span> <br><br>
+                                            <input type="submit" value="Submit" class="btn btn-success">
+                                        </form>
+                                    </div>
+                                    <button class="btn btn-outline-primary  m-1" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#login">Login</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <form action="/backend">
-                                    Customer Name : <input type="text" name="name" id="name" required><br><br>
+                        </div>
+                    </div>
+                    <div class="modal modal-lg fade" id="order" tabindex="-1" aria-labelledby="orderModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="orderModalLabel">Give your Order</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/backend">
+                                        Customer Name : <input type="text" name="name" id="name" required><br><br>
 
-                                    <select class="form-select" aria-label="Default select example" required>
-                                        <option value="1">First Item</option>
-                                        <option value="2">Second item</option>
-                                        <option value="3">Third Item</option>
-                                    </select>
-                                    <br>
-                                    <select class="form-select" aria-label="Default select example" required>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                    <br>
-                                    Phone Number : <input type="text" name="num" id="num" required>
-                                    <br><br>
-                                    Address : <input type="text" name="add" id="add" required><br><br>
-                                    <input type="submit" value="Submit" class="btn btn-success">
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <select class="form-select" aria-label="Default select example" name="select1"
+                                            id="parentFoodSelect" onchange="populate()" required>
+                                            <option value="">Select Food</option>
+                                            <option value="sweet">Sweet</option>
+                                            <option value="fastfood">Fast Food</option>
+                                            <option value="indianfood">Indian Food</option>
+                                            <option value="Drinks">Drinks</option>
+                                        </select>
+                                        <br>
+                                        <script>
+                                            
+                                        </script>
+                                        <select class="form-select" id="childFoodSelect" name="select2"
+                                            aria-label="Default select example" required>
+                                        </select>
+                                        <br>
+                                        Phone Number : <input type="number" name="num" id="num" required>
+                                        <br><br>
+                                        Address : <input type="text" name="add" id="add" required><br><br>
+                                        <input type="submit" value="Submit" class="btn btn-success">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,8 +179,7 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="row content">
+    <div class="container-fluid">
         <div class="row" id="section1">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
@@ -170,7 +216,7 @@
                 </button>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="sweetcolumn">
             <div class="row p-5" id="section2">
                 <div class="container">
                     <div class="card-group">
@@ -461,31 +507,32 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid row footer h-25" id="Footer">
-        <div class="col-4">
-            <h5>Address</h5>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis qui ex corrupti sed mollitia,
-                    nisi labore quia nemo iusto recusandae?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis qui ex corrupti sed mollitia,
-                    nisi labore quia nemo iusto recusandae?</li>
-            </ul>
+    <div class="container-fluid footer h-25" id="Footer">
+        <div class="row">
+            <div class="col-4">
+                <h5>Address</h5>
+                <ul>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15128.930489991744!2d73.7661468!3d18.5635484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd1893d4941592f7f!2sTeerth%20Coworking!5e0!3m2!1sen!2sin!4v1666891470422!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h5>Links</h5>
+                <ul>
+                    <li> <a href="#indianFoodIndicator" class="nav-link">Indian Food</a></li>
+                    <li> <a href="#fastFoodIndicator" class="nav-link">Fast Food</a></li>
+                    <li> <a href="#demofood1" class="nav-link">Drinks</a></li>
+                    <li> <a href="#sweetcolumn" class="nav-link">Sweet</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h5>Contact us</h5>
+                <b>Phone : </b> 8999688831 <br>
+                <b>Email : </b> quadwave@qmail.com
+            </div>
         </div>
-        <div class="col-4">
-            <h5>Links</h5>
-            <ul>
-                <li> <a href="#indianFoodIndicator" class="nav-link">Indian Food</a></li>
-                <li> <a href="#fastFoodIndicator" class="nav-link">Fast Food</a></li>
-                <li> <a href="#demofood1" class="nav-link">Demo Food</a></li>
-                <li> <a href="#sweetFoodIndicator" class="nav-link">Sweet</a></li>
-            </ul>
-        </div>
-        <div class="col-4">
-            <h5>Contact us</h5>
-            <b>Phone : </b> 8999688831 <br>
-            <b>Email : </b> quadwave@qmail.com
-        </div>
-    </div>
     </div>
 </body>
 

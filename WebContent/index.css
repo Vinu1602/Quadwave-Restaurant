@@ -10,3 +10,17 @@
     padding: 2rem;
 }
 
+.red-border{
+    border: 5px groove red;
+    color: red;
+}
+.green-border{
+    border: 5px groove green;
+    color : green;
+}
+@media screen and (max-width: 580px){
+    body{
+        font-size: 12px;
+        background-color: antiquewhite;
+    }
+}
