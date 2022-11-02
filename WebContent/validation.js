@@ -1,28 +1,5 @@
-function validate(){
-    var a = document.getElementById('rpassword').value;
-    var b = document.getElementById('rcpassword').value;
+password_verify = 0
 
-    if(a==b){
-        var c = document.getElementById('rcpassword').classList;
-        c.remove('bg-opacity-25');
-        c.remove('bg-danger');
-        c.add('bg-opacity-25');
-        c.add('bg-success');
-    }
-    else{
-        var c = document.getElementById('rcpassword').classList;
-        c.remove('bg-opacity-25');
-        c.remove('bg-success');
-        c.add('bg-opacity-25');
-        c.add('bg-danger');
-    }
-}
-
-function adddanger(){
-    const a = document.getElementById('rcpassword').classList;
-    a.add("bg-opacity-25");
-    a.add("bg-danger");
-}
 
 function populate() {
     var s1 = document.getElementById('parentFoodSelect');
@@ -52,3 +29,4 @@ function populate() {
         s2.options.add(newoption);   
     }
 }
+

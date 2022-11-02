@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+
+body {
+    padding: 10px 50px;
+}
+
+.formdesign {
+    font-size: 20px;
+
+}
+
+/* .formdesign input {
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid blue;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+} */
+
+.inputdanger {
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid blue;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.inputprimary {
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid red;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.inputsuccess{
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid green;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.formerror {
+    color: red;
+}
+
+.but {
+    border-radius: 9px;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    margin: 22px 20px;
+}
